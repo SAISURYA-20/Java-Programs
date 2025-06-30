@@ -1,21 +1,25 @@
-class Isfib{
-public static void main(String[] args)
-{
-int c;
-int m=13
-int n=90;
-int a=1;
-int b=1;
-System.out.println(a);
-System.out.println(b);
+package day11;
 
-while(n>1)
-c=a+b;
-System.out.println(c);
-n--;
-a=b;
-b=c;
+public class Isfib {
+	boolean isfibonacci(int n)
+	{
+		int a=0;
+		int b=1;
+		while(a<n) {
+			int c=a+b;
+			a=b;
+			b=c;
+			
+			if(a==n)
+				return true;
+		}
+		return false;
+		
+	}
+	public static void main(String[] args) {
+		Isfib obj=new Isfib();
+		boolean ans=obj.isfibonacci(9);
+		System.out.println(ans);
+	}
+
 }
-}
-
-
